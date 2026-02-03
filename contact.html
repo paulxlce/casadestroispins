@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | Casa des Trois Pins</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="nav-wrapper">
+          <a class="logo" href="index.html#accueil" aria-label="Casa des Trois Pins">
+            <img src="assets/logo/Screenshot%202026-01-30%20at%2011.36.33.png" alt="Casa des Trois Pins" class="logo-image" />
+          </a>
+          <nav class="primary-nav" aria-label="Navigation principale">
+            <a href="index.html#accueil">Accueil</a>
+            <a href="index.html#villa">La villa</a>
+            <a href="experience.html">Expérience</a>
+            <a href="booking.html">Réserver</a>
+          </nav>
+          <div class="header-actions">
+            <a class="button button-ghost" href="booking.html">Réserver</a>
+            <a class="button" href="contact.html">Contact</a>
+          </div>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <button class="mobile-close" type="button" aria-label="Fermer le menu">×</button>
+        <nav class="mobile-nav" aria-label="Navigation mobile">
+          <a href="index.html#accueil">Accueil</a>
+          <a href="index.html#villa">La villa</a>
+          <a href="experience.html">Expérience</a>
+          <a class="button button-ghost" href="booking.html">Réserver</a>
+          <a class="button" href="contact.html">Contact</a>
+        </nav>
+      </div>
+
+      <main>
+        <section class="page-hero page-hero-simple">
+          <div class="page-hero-content">
+            <p class="eyebrow">Contact</p>
+            <h1>Parlons de votre séjour</h1>
+            <p>
+              Besoin d'informations supplémentaires ou d'un conseil pour votre
+              séjour ? Contactez directement le propriétaire.
+            </p>
+          </div>
+        </section>
+
+        <section class="contact-grid">
+          <div class="contact-card">
+            <h3>Nous joindre</h3>
+            <p>Disponible 7j/7 pour organiser votre arrivée.</p>
+            <div class="contact-methods">
+              <a href="tel:+33612345678">+33 6 12 34 56 78</a>
+              <a href="mailto:contact@casadestroispins.com">contact@casadestroispins.com</a>
+            </div>
+            <div class="contact-actions">
+              <a class="button" href="tel:+33612345678">Appeler</a>
+              <a class="button button-ghost" href="mailto:contact@casadestroispins.com">Envoyer un email</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <h3>Message direct</h3>
+            <p>Laissez-nous un message et nous vous rappelons rapidement.</p>
+            <form class="contact-form">
+              <label>
+                Nom complet
+                <input type="text" placeholder="Votre nom" required />
+              </label>
+              <label>
+                Email
+                <input type="email" placeholder="vous@email.com" required />
+              </label>
+              <label>
+                Téléphone
+                <input type="tel" placeholder="+33" />
+              </label>
+              <label>
+                Votre message
+                <textarea rows="4" placeholder="Dates souhaitées, besoins particuliers..."></textarea>
+              </label>
+              <div class="callback">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  Être rappelé(e) rapidement
+                </label>
+                <select>
+                  <option value="">Créneau préféré</option>
+                  <option>Matin (9h - 12h)</option>
+                  <option>Après-midi (14h - 18h)</option>
+                  <option>Soir (18h - 20h)</option>
+                </select>
+              </div>
+              <button class="button" type="submit">Envoyer la demande</button>
+            </form>
+          </div>
+        </section>
+
+        <section class="cta">
+          <h2>Prêt à réserver ?</h2>
+          <p>Nous pouvons aussi préparer un séjour personnalisé pour votre groupe.</p>
+          <div class="cta-actions">
+            <a class="button" href="booking.html">Réserver</a>
+            <a class="button button-ghost" href="experience.html">Voir l'expérience</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-top">
+          <div class="footer-logo">
+            <img src="assets/logo/Screenshot%202026-01-30%20at%2011.37.15.png" alt="Logo Casa des Trois Pins" />
+            <span>Casa des Trois Pins</span>
+          </div>
+          <div class="footer-columns">
+            <div>
+              <h4>Casa des Trois Pins</h4>
+              <a href="index.html#accueil">Accueil</a>
+              <a href="index.html#villa">La Villa</a>
+              <a href="experience.html">Expérience</a>
+              <a href="booking.html">Tarifs</a>
+              <a href="contact.html">Contact</a>
+            </div>
+            <div>
+              <h4>Informations</h4>
+              <a href="#">Localisation</a>
+              <a href="#">Conditions</a>
+              <a href="#">FAQ</a>
+              <a href="#">Mentions légales</a>
+              <a href="#">Politique de confidentialité</a>
+            </div>
+            <div>
+              <h4>Suivez-nous</h4>
+              <a href="#">Instagram</a>
+              <a href="#">Facebook</a>
+              <a href="#">Newsletter</a>
+              <a href="#">Restez informé</a>
+            </div>
+            <div class="newsletter">
+              <h4>Email</h4>
+              <label for="newsletter">Envoyer</label>
+              <div class="newsletter-form">
+                <input id="newsletter" type="email" placeholder="Votre email" />
+                <button class="button" type="button">Merci pour votre inscription !</button>
+              </div>
+              <p class="fineprint">
+                En vous abonnant, vous acceptez notre politique de confidentialité.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2024 Casa des Trois Pins. Tous droits réservés</p>
+          <div class="footer-links">
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Conditions d'utilisation</a>
+            <a href="#">Paramètres des cookies</a>
+          </div>
+          <div class="social">
+            <span>●</span><span>●</span><span>●</span><span>●</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

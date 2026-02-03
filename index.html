@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Casa des Trois Pins</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="nav-wrapper">
+          <a class="logo" href="#accueil" aria-label="Casa des Trois Pins">
+            <img src="assets/logo/Screenshot%202026-01-30%20at%2011.36.33.png" alt="Casa des Trois Pins" class="logo-image" />
+          </a>
+          <nav class="primary-nav" aria-label="Navigation principale">
+            <a href="#accueil">Accueil</a>
+            <a href="#villa">La villa</a>
+            <a href="experience.html">Expérience</a>
+            <a href="booking.html">Réserver</a>
+          </nav>
+          <div class="header-actions">
+            <a class="button button-ghost" href="booking.html">Réserver</a>
+            <a class="button" href="contact.html">Contact</a>
+          </div>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <button class="mobile-close" type="button" aria-label="Fermer le menu">×</button>
+        <nav class="mobile-nav" aria-label="Navigation mobile">
+          <a href="#accueil">Accueil</a>
+          <a href="#villa">La villa</a>
+          <a href="experience.html">Expérience</a>
+          <a class="button button-ghost" href="booking.html">Réserver</a>
+          <a class="button" href="contact.html">Contact</a>
+        </nav>
+      </div>
+
+      <main>
+        <section class="video-hero" aria-label="Présentation de la villa">
+          <video
+            class="video-hero-media"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="assets/photos/Case%20des%203%20Pins.jpeg"
+          >
+            <source src="assets/video/copy_6A945D22-7497-46B6-8EB8-4B225BEF0545.MOV" type="video/quicktime" />
+            Votre navigateur ne peut pas lire cette vidéo.
+          </video>
+          <div class="video-hero-overlay"></div>
+          <div class="video-hero-content">
+            <p class="eyebrow">Casa des Trois Pins</p>
+            <h1>Un refuge d'architecte entre pins, lac et océan</h1>
+            <p>
+              Une immersion immédiate dans l'art de vivre landais, entre lumière
+              douce et élégance naturelle.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="booking.html">Réserver</a>
+              <a class="button button-ghost" href="#villa">Découvrir</a>
+            </div>
+          </div>
+          <div class="scroll-indicator" aria-hidden="true">↓</div>
+        </section>
+        <section class="hero" id="accueil">
+          <img src="assets/photos/Case%20des%203%20Pins.jpeg" alt="Villa Casa des Trois Pins" class="hero-image" />
+          <div class="hero-content">
+            <h1>Casa des trois pins – l'art de vivre landais</h1>
+            <p>
+              Une villa d'architecte nichée entre océan, forêt et lac. Découvrez
+              un havre de paix au cœur des Landes, où le confort rencontre la
+              nature sauvage.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#villa">Découvrir</a>
+            <a class="button button-ghost" href="booking.html">Réserver</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="essence" id="villa">
+          <div class="section-text">
+            <h2>L'essence de la Casa des trois pins</h2>
+            <p>
+              Découvrez cette sublime villa, conçue pour des vacances mémorables
+              en famille ou entre amis.
+            </p>
+            <p>
+              Avec ses 6 chambres spacieuses climatisées et 5 salles de bain
+              modernes, elle accueille jusqu'à 12 personnes dans un cadre raffiné
+              et chaleureux. Le spacieux salon, sublimé par une hauteur sous
+              plafond majestueuse, crée une atmosphère élégante et accueillante.
+              Un espace propice à la détente et aux moments conviviaux, baignés
+              de lumière naturelle.
+            </p>
+            <p>
+              À l'extérieur, deux terrasses généreuses, l'une ensoleillée,
+              l'autre ombragée, offrent des espaces parfaits pour des repas en
+              plein air ou des soirées paisibles. La piscine chauffée, parfaite
+              pour des baignades prolongées, apporte un confort supplémentaire à
+              votre séjour.
+            </p>
+          </div>
+          <div class="collage">
+            <div class="collage-tile small">
+              <img src="assets/photos/9%20Av.%20du%20Penon%20-11.jpeg" alt="Terrasse de la villa" />
+            </div>
+            <div class="collage-tile large">
+              <img src="assets/photos/9%20Av.%20du%20Penon%20-12.jpeg" alt="Cuisine ouverte" />
+            </div>
+          </div>
+        </section>
+
+        <section class="testimonial" aria-label="Avis clients">
+          <div class="testimonial-carousel" data-carousel>
+            <button class="carousel-btn" type="button" data-prev aria-label="Avis précédent">←</button>
+            <div class="testimonial-track">
+              <article class="testimonial-card is-active" data-slide>
+                <div class="stars">★★★★★</div>
+                <p>
+                  Nous avons passé une semaine merveilleuse à Casa des 3 pins. La
+                  maison est vraiment belle et si bien équipée. La climatisation
+                  dans les chambres était un vrai plus lorsque nous arrivons à
+                  la fin d'une vague de chaleur. Nous marchions jusqu'à la plage
+                  tous les jours où mon fils faisait des cours de surf. La
+                  maison est vraiment bien située près de Hossegor et entre
+                  l'océan et la forêt de pins.
+                </p>
+                <p>
+                  Florence a été vraiment réactive et serviable et a donné
+                  d'excellentes recommandations. Nous recommandons vivement cette
+                  villa.
+                </p>
+                <div class="author">
+                  <span class="author-dot"></span>
+                  <div>
+                    <strong>Gwendoline</strong>
+                    <span>6 ans sur Airbnb</span>
+                  </div>
+                </div>
+              </article>
+              <article class="testimonial-card" data-slide>
+                <div class="stars">★★★★★</div>
+                <p>
+                  Un séjour magique, entre océan et forêt de pins. La villa est
+                  lumineuse, spacieuse, et chaque détail est pensé pour se sentir
+                  chez soi dès l'arrivée.
+                </p>
+                <p>
+                  Le patio ombragé et la piscine chauffée sont de vrais atouts
+                  après une journée à la plage.
+                </p>
+                <div class="author">
+                  <span class="author-dot"></span>
+                  <div>
+                    <strong>Marie Dupont</strong>
+                    <span>Architecte, Paris</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <button class="carousel-btn" type="button" data-next aria-label="Avis suivant">→</button>
+          </div>
+          <div class="carousel-dots" role="tablist">
+            <button class="dot is-active" type="button" data-dot></button>
+            <button class="dot" type="button" data-dot></button>
+          </div>
+        </section>
+
+        <section class="gallery" id="galerie">
+          <div class="gallery-main">
+            <img src="assets/photos/9%20Av.%20du%20Penon%20-1.jpeg" alt="Vue intérieure avec accès terrasse" />
+          </div>
+          <div class="gallery-side">
+            <img src="assets/photos/9%20Av.%20du%20Penon%20-3.jpeg" alt="Terrasse extérieure" />
+          </div>
+        </section>
+
+        <section class="cta" id="reserver">
+          <h2>Votre séjour vous attend</h2>
+          <p>Réservez maintenant et préparez-vous à vivre une expérience unique au cœur des Landes.</p>
+          <div class="cta-actions">
+            <a class="button" href="booking.html">Réserver</a>
+            <a class="button button-ghost" href="contact.html">Contactez-nous</a>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="site-footer" id="contact">
+        <div class="footer-top">
+          <div class="footer-logo">
+            <img src="assets/logo/Screenshot%202026-01-30%20at%2011.37.15.png" alt="Logo Casa des Trois Pins" />
+            <span>Casa des Trois Pins</span>
+          </div>
+          <div class="footer-columns">
+            <div>
+              <h4>Casa des Trois Pins</h4>
+              <a href="#accueil">Accueil</a>
+              <a href="#villa">La Villa</a>
+              <a href="experience.html">Expérience</a>
+              <a href="booking.html">Tarifs</a>
+              <a href="contact.html">Contact</a>
+            </div>
+            <div>
+              <h4>Informations</h4>
+              <a href="#">Localisation</a>
+              <a href="#">Conditions</a>
+              <a href="#">FAQ</a>
+              <a href="#">Mentions légales</a>
+              <a href="#">Politique de confidentialité</a>
+            </div>
+            <div>
+              <h4>Suivez-nous</h4>
+              <a href="#">Instagram</a>
+              <a href="#">Facebook</a>
+              <a href="#">Newsletter</a>
+              <a href="#">Restez informé</a>
+            </div>
+            <div class="newsletter">
+              <h4>Email</h4>
+              <label for="newsletter">Envoyer</label>
+              <div class="newsletter-form">
+                <input id="newsletter" type="email" placeholder="Votre email" />
+                <button class="button" type="button">Merci pour votre inscription !</button>
+              </div>
+              <p class="fineprint">
+                En vous abonnant, vous acceptez notre politique de confidentialité.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2024 Casa des Trois Pins. Tous droits réservés</p>
+          <div class="footer-links">
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Conditions d'utilisation</a>
+            <a href="#">Paramètres des cookies</a>
+          </div>
+          <div class="social">
+            <span>●</span><span>●</span><span>●</span><span>●</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

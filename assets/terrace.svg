@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700">
+  <defs>
+    <linearGradient id="grad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#e4ddd0" />
+      <stop offset="100%" stop-color="#c6bcae" />
+    </linearGradient>
+  </defs>
+  <rect width="900" height="700" fill="url(#grad)" />
+  <rect x="70" y="90" width="760" height="420" fill="#d2c8bb" rx="22" />
+  <rect x="100" y="540" width="540" height="110" fill="#b7ab9c" rx="16" />
+  <text x="90" y="640" fill="#ffffff" font-size="42" font-family="Georgia, serif">Terrasse ensoleillee</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="900" viewBox="0 0 800 900">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#9bb3c4" />
+      <stop offset="70%" stop-color="#cfe0ea" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="900" fill="url(#sky)" />
+  <rect y="520" width="800" height="380" fill="#b9a690" />
+  <rect y="480" width="800" height="80" fill="#6e8aa4" />
+  <text x="60" y="820" fill="#ffffff" font-size="46" font-family="Georgia, serif">Plages landaises</text>
+</svg>

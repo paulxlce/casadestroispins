@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="900" viewBox="0 0 800 900">
+  <defs>
+    <linearGradient id="green" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#9bb38a" />
+      <stop offset="100%" stop-color="#6f8261" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="900" fill="url(#green)" />
+  <rect x="60" y="140" width="680" height="420" fill="#7c8e6b" rx="24" />
+  <rect x="140" y="600" width="520" height="180" fill="#68765a" rx="18" />
+  <text x="70" y="820" fill="#ffffff" font-size="46" font-family="Georgia, serif">Golfs preferes</text>
+</svg>

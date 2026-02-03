@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700">
+  <defs>
+    <linearGradient id="grad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f0e6d7" />
+      <stop offset="100%" stop-color="#d1c5b3" />
+    </linearGradient>
+  </defs>
+  <rect width="900" height="700" fill="url(#grad)" />
+  <rect x="80" y="120" width="720" height="300" fill="#e0d4c2" rx="24" />
+  <rect x="120" y="460" width="640" height="150" fill="#c9bba7" rx="18" />
+  <text x="90" y="640" fill="#ffffff" font-size="42" font-family="Georgia, serif">Cuisine ouverte</text>
+</svg>
