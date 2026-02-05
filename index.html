@@ -10,11 +10,11 @@
     <div class="page">
       <header class="site-header">
         <div class="nav-wrapper">
-          <a class="logo" href="#accueil" aria-label="Casa des Trois Pins">
+          <a class="logo" href="#video" aria-label="Casa des Trois Pins">
             <img src="assets/logo/Screenshot%202026-01-30%20at%2011.36.33.png" alt="Casa des Trois Pins" class="logo-image" />
           </a>
           <nav class="primary-nav" aria-label="Navigation principale">
-            <a href="#accueil">Accueil</a>
+            <a href="#video">Accueil</a>
             <a href="#villa">La villa</a>
             <a href="experience.html">Expérience</a>
             <a href="booking.html">Réserver</a>
@@ -33,7 +33,7 @@
       <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
         <button class="mobile-close" type="button" aria-label="Fermer le menu">×</button>
         <nav class="mobile-nav" aria-label="Navigation mobile">
-          <a href="#accueil">Accueil</a>
+          <a href="#video">Accueil</a>
           <a href="#villa">La villa</a>
           <a href="experience.html">Expérience</a>
           <a class="button button-ghost" href="booking.html">Réserver</a>
@@ -42,19 +42,17 @@
       </div>
 
       <main>
-        <section class="video-hero" aria-label="Présentation de la villa">
-          <video
-            class="video-hero-media"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-            poster="assets/photos/Case%20des%203%20Pins.jpeg"
-          >
-            <source src="assets/video/copy_6A945D22-7497-46B6-8EB8-4B225BEF0545.MOV" type="video/quicktime" />
-            Votre navigateur ne peut pas lire cette vidéo.
-          </video>
+        <section class="video-hero" id="video" aria-label="Présentation de la villa">
+          <div class="video-hero-media">
+            <iframe
+              class="vimeo-embed"
+              src="https://player.vimeo.com/video/1162129074?background=1&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0&amp;title=0&amp;byline=0&amp;portrait=0&amp;playsinline=1&amp;dnt=1"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              referrerpolicy="strict-origin-when-cross-origin"
+              title="Casa des Trois Pins"
+            ></iframe>
+          </div>
           <div class="video-hero-overlay"></div>
           <div class="video-hero-content">
             <p class="eyebrow">Casa des Trois Pins</p>
@@ -79,9 +77,16 @@
               un havre de paix au cœur des Landes, où le confort rencontre la
               nature sauvage.
             </p>
+            <ul class="hero-specs" aria-label="Caractéristiques principales">
+              <li>6 chambres</li>
+              <li>5 salles de bains</li>
+              <li>12 personnes</li>
+              <li>Climatisation</li>
+              <li>Piscine</li>
+            </ul>
             <div class="hero-actions">
               <a class="button" href="#villa">Découvrir</a>
-            <a class="button button-ghost" href="booking.html">Réserver</a>
+              <a class="button button-ghost" href="booking.html">Réserver</a>
             </div>
           </div>
         </section>

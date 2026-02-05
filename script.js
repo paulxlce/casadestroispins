@@ -4,21 +4,31 @@ const mobileClose = document.querySelector('.mobile-close');
 const mobileLinks = document.querySelectorAll('.mobile-nav a, .mobile-nav button');
 
 const toggleMenu = (open) => {
+  if (!mobileMenu || !menuToggle) return;
   const isOpen = open ?? !mobileMenu.classList.contains('is-open');
   mobileMenu.classList.toggle('is-open', isOpen);
   mobileMenu.setAttribute('aria-hidden', String(!isOpen));
   menuToggle.setAttribute('aria-expanded', String(isOpen));
 };
 
-menuToggle.addEventListener('click', () => toggleMenu());
-mobileClose.addEventListener('click', () => toggleMenu(false));
-mobileLinks.forEach((link) => link.addEventListener('click', () => toggleMenu(false)));
+if (menuToggle) {
+  menuToggle.addEventListener('click', () => toggleMenu());
+}
+
+if (mobileClose) {
+  mobileClose.addEventListener('click', () => toggleMenu(false));
+}
+
+if (mobileLinks.length) {
+  mobileLinks.forEach((link) => link.addEventListener('click', () => toggleMenu(false)));
+}
 
 const slides = Array.from(document.querySelectorAll('[data-slide]'));
 const dots = Array.from(document.querySelectorAll('[data-dot]'));
 let activeIndex = 0;
 
 const setActiveSlide = (index) => {
+  if (!slides.length || !dots.length) return;
   slides[activeIndex].classList.remove('is-active');
   dots[activeIndex].classList.remove('is-active');
   activeIndex = (index + slides.length) % slides.length;
@@ -34,4 +44,6 @@ if (prevBtn && nextBtn) {
   nextBtn.addEventListener('click', () => setActiveSlide(activeIndex + 1));
 }
 
-dots.forEach((dot, index) => dot.addEventListener('click', () => setActiveSlide(index)));
+if (dots.length) {
+  dots.forEach((dot, index) => dot.addEventListener('click', () => setActiveSlide(index)));
+}
