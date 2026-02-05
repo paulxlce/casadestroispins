@@ -410,7 +410,15 @@ section {
   max-width: var(--page-width);
   margin: 0 auto;
   border-radius: 28px;
+<<<<<<< HEAD
   box-shadow: 0 20px 50px rgba(26, 20, 14, 0.1);
+=======
+<<<<<<< HEAD
+  box-shadow: 0 16px 36px rgba(26, 20, 14, 0.08);
+=======
+  box-shadow: 0 20px 50px rgba(26, 20, 14, 0.1);
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
 }
 
 .page-hero-simple {
@@ -424,8 +432,16 @@ section {
 
 .page-hero-content {
   grid-column: 1 / span 6;
+<<<<<<< HEAD
   display: grid;
   gap: 12px;
+=======
+<<<<<<< HEAD
+=======
+  display: grid;
+  gap: 12px;
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
 }
 
 .page-hero-media {
@@ -445,7 +461,15 @@ section {
 .page-hero-media img {
   width: 100%;
   border-radius: var(--radius);
+<<<<<<< HEAD
   box-shadow: 0 24px 60px rgba(23, 18, 12, 0.18);
+=======
+<<<<<<< HEAD
+  box-shadow: 0 22px 50px rgba(23, 18, 12, 0.2);
+=======
+  box-shadow: 0 24px 60px rgba(23, 18, 12, 0.18);
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
 }
 
 .essence {
@@ -790,6 +814,7 @@ section {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: var(--gutter);
   padding: var(--section-pad) 6vw;
+<<<<<<< HEAD
   background: linear-gradient(135deg, rgba(47, 59, 47, 0.06), rgba(180, 150, 90, 0.06));
   border-top: 1px solid rgba(31, 30, 27, 0.06);
   border-bottom: 1px solid rgba(31, 30, 27, 0.06);
@@ -797,6 +822,23 @@ section {
   margin: 0 auto;
   border-radius: 28px;
   box-shadow: 0 18px 40px rgba(26, 20, 14, 0.08);
+=======
+<<<<<<< HEAD
+  background: var(--bg-alt);
+  border-top: 1px solid rgba(31, 30, 27, 0.08);
+  border-bottom: 1px solid rgba(31, 30, 27, 0.08);
+  max-width: var(--page-width);
+  margin: 0 auto;
+=======
+  background: linear-gradient(135deg, rgba(47, 59, 47, 0.06), rgba(180, 150, 90, 0.06));
+  border-top: 1px solid rgba(31, 30, 27, 0.06);
+  border-bottom: 1px solid rgba(31, 30, 27, 0.06);
+  max-width: var(--page-width);
+  margin: 0 auto;
+  border-radius: 28px;
+  box-shadow: 0 18px 40px rgba(26, 20, 14, 0.08);
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
 }
 
 .experience-map .map-card {
@@ -807,6 +849,24 @@ section {
   grid-column: 8 / span 5;
 }
 
+<<<<<<< HEAD
+.distance-list .button {
+  justify-self: start;
+}
+
+=======
+<<<<<<< HEAD
+>>>>>>> c3b544a (Mises à jour site)
+.map-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 22px;
+  padding: 18px;
+<<<<<<< HEAD
+  box-shadow: 0 20px 45px rgba(20, 16, 10, 0.12);
+  border: 1px solid rgba(31, 30, 27, 0.06);
+=======
+  box-shadow: 0 20px 45px rgba(20, 16, 10, 0.18);
+=======
 .distance-list .button {
   justify-self: start;
 }
@@ -817,6 +877,8 @@ section {
   padding: 18px;
   box-shadow: 0 20px 45px rgba(20, 16, 10, 0.12);
   border: 1px solid rgba(31, 30, 27, 0.06);
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
 }
 
 .map-card img {
@@ -863,11 +925,26 @@ section {
 }
 
 .distance-list {
+<<<<<<< HEAD
   background: rgba(255, 255, 255, 0.92);
   border-radius: 22px;
   padding: 24px;
   box-shadow: 0 20px 45px rgba(20, 16, 10, 0.12);
   border: 1px solid rgba(31, 30, 27, 0.06);
+=======
+<<<<<<< HEAD
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 20px 45px rgba(20, 16, 10, 0.18);
+=======
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 20px 45px rgba(20, 16, 10, 0.12);
+  border: 1px solid rgba(31, 30, 27, 0.06);
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
   display: grid;
   gap: 18px;
 }
@@ -879,7 +956,15 @@ section {
 .distance-list ul {
   list-style: none;
   display: grid;
+<<<<<<< HEAD
   gap: 12px;
+=======
+<<<<<<< HEAD
+  gap: 10px;
+=======
+  gap: 12px;
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
   color: var(--muted);
   font-size: 14.5px;
 }
@@ -891,16 +976,43 @@ section {
 .experience-lists {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
+<<<<<<< HEAD
   gap: calc(var(--gutter) * 1.2);
+=======
+<<<<<<< HEAD
+  gap: var(--gutter);
+=======
+  gap: calc(var(--gutter) * 1.2);
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
   padding: var(--section-pad) 6vw;
   max-width: var(--page-width);
   margin: 0 auto;
 }
 
+<<<<<<< HEAD
 .experience-directory .directory-card {
   grid-column: span 4;
 }
 
+=======
+<<<<<<< HEAD
+.experience-lists .list-card {
+  grid-column: span 4;
+}
+
+.list-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 18px 40px rgba(22, 18, 12, 0.14);
+  border: 1px solid rgba(31, 30, 27, 0.06);
+=======
+.experience-directory .directory-card {
+  grid-column: span 4;
+}
+
+>>>>>>> c3b544a (Mises à jour site)
 .experience-directory {
   margin-top: 12px;
 }
@@ -965,10 +1077,46 @@ section {
 .directory-card span {
   color: #6a645b;
   font-size: 13px;
+<<<<<<< HEAD
+=======
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
 }
 
 .booking-grid {
   display: grid;
+<<<<<<< HEAD
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+=======
+<<<<<<< HEAD
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+>>>>>>> c3b544a (Mises à jour site)
+  gap: var(--gutter);
+  padding: 0 6vw var(--section-pad);
+  max-width: min(1320px, 92vw);
+  margin: 24px auto 0;
+  align-items: stretch;
+}
+
+.booking-grid .calendar-card {
+  grid-column: auto;
+}
+
+.booking-grid .booking-summary {
+  grid-column: auto;
+}
+
+.calendar-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 26px;
+  padding: 28px 28px 24px;
+  box-shadow: 0 28px 70px rgba(20, 16, 10, 0.12);
+  border: 1px solid rgba(31, 30, 27, 0.04);
+  align-self: start;
+<<<<<<< HEAD
+  height: 100%;
+=======
+=======
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--gutter);
   padding: 0 6vw var(--section-pad);
@@ -993,13 +1141,27 @@ section {
   border: 1px solid rgba(31, 30, 27, 0.04);
   align-self: start;
   height: 100%;
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
 }
 
 .calendar-header {
   display: flex;
+<<<<<<< HEAD
   align-items: flex-start;
   justify-content: space-between;
   gap: 18px;
+=======
+<<<<<<< HEAD
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+=======
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
 }
 
 .calendar-header h2 {
@@ -1015,6 +1177,32 @@ section {
 .month-nav {
   display: inline-flex;
   align-items: center;
+<<<<<<< HEAD
+  gap: 12px;
+  font-size: 13px;
+=======
+<<<<<<< HEAD
+  gap: 10px;
+  font-size: 14px;
+>>>>>>> c3b544a (Mises à jour site)
+  text-transform: capitalize;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(31, 30, 27, 0.08);
+}
+
+.nav-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(31, 30, 27, 0.12);
+  background: #ffffff;
+  cursor: pointer;
+<<<<<<< HEAD
+  box-shadow: 0 8px 18px rgba(16, 12, 8, 0.08);
+=======
+=======
   gap: 12px;
   font-size: 13px;
   text-transform: capitalize;
@@ -1032,18 +1220,37 @@ section {
   background: #ffffff;
   cursor: pointer;
   box-shadow: 0 8px 18px rgba(16, 12, 8, 0.08);
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
 }
 
 .calendar-legend {
   display: flex;
+<<<<<<< HEAD
   gap: 14px;
   margin-top: 18px;
   font-size: 11px;
+=======
+<<<<<<< HEAD
+  gap: 16px;
+  margin-top: 18px;
+  font-size: 12px;
+=======
+  gap: 14px;
+  margin-top: 18px;
+  font-size: 11px;
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--muted);
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c3b544a (Mises à jour site)
 .calendar-multi {
   margin-top: 18px;
   display: grid;
@@ -1051,6 +1258,10 @@ section {
   gap: 20px;
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
 .calendar-legend .legend-dot {
   width: 10px;
   height: 10px;
@@ -1072,15 +1283,37 @@ section {
 }
 
 .calendar-grid {
+<<<<<<< HEAD
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 6px;
   width: 100%;
+=======
+<<<<<<< HEAD
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+=======
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  width: 100%;
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
 }
 
 .calendar-day-header {
   text-align: center;
+<<<<<<< HEAD
   font-size: 9.5px;
+=======
+<<<<<<< HEAD
+  font-size: 11px;
+=======
+  font-size: 9.5px;
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
   letter-spacing: 1.2px;
   text-transform: uppercase;
   color: var(--muted);
@@ -1088,6 +1321,31 @@ section {
 
 .calendar-day {
   border-radius: 12px;
+<<<<<<< HEAD
+  border: 1px solid rgba(31, 30, 27, 0.06);
+  height: 36px;
+  padding: 6px 0;
+=======
+<<<<<<< HEAD
+  border: 1px solid transparent;
+  padding: 10px 0;
+>>>>>>> c3b544a (Mises à jour site)
+  text-align: center;
+  background: #f9f6f0;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 13px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  min-width: 0;
+}
+
+.calendar-day:hover {
+<<<<<<< HEAD
+  border-color: rgba(47, 59, 47, 0.35);
+  background: #f2ede4;
+=======
+  border-color: rgba(47, 59, 47, 0.4);
+=======
   border: 1px solid rgba(31, 30, 27, 0.06);
   height: 36px;
   padding: 6px 0;
@@ -1103,6 +1361,8 @@ section {
 .calendar-day:hover {
   border-color: rgba(47, 59, 47, 0.35);
   background: #f2ede4;
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
 }
 
 .calendar-day.empty {
@@ -1130,20 +1390,45 @@ section {
 }
 
 .booking-summary {
+<<<<<<< HEAD
   background: rgba(255, 255, 255, 0.92);
   border-radius: 26px;
   padding: 28px;
   box-shadow: 0 28px 70px rgba(20, 16, 10, 0.12);
   border: 1px solid rgba(31, 30, 27, 0.04);
+=======
+<<<<<<< HEAD
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: 0 22px 50px rgba(20, 16, 10, 0.18);
+  border: 1px solid rgba(31, 30, 27, 0.06);
+=======
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 26px;
+  padding: 28px;
+  box-shadow: 0 28px 70px rgba(20, 16, 10, 0.12);
+  border: 1px solid rgba(31, 30, 27, 0.04);
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
   display: grid;
   gap: 18px;
   align-self: start;
   position: sticky;
   top: 120px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c3b544a (Mises à jour site)
   min-width: 0;
   width: 100%;
   overflow: hidden;
   height: 100%;
+<<<<<<< HEAD
+=======
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
 }
 
 .date-inputs {
@@ -1164,7 +1449,14 @@ section {
   border-radius: 10px;
   border: 1px solid rgba(47, 59, 47, 0.2);
   background: #f8f5ef;
+<<<<<<< HEAD
   width: 100%;
+=======
+<<<<<<< HEAD
+=======
+  width: 100%;
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
 }
 
 .price-breakdown {
@@ -1178,7 +1470,15 @@ section {
   display: flex;
   justify-content: space-between;
   padding-bottom: 8px;
+<<<<<<< HEAD
   border-bottom: 1px solid rgba(31, 30, 27, 0.06);
+=======
+<<<<<<< HEAD
+  border-bottom: 1px solid rgba(31, 30, 27, 0.08);
+=======
+  border-bottom: 1px solid rgba(31, 30, 27, 0.06);
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
 }
 
 .price-breakdown .row.total {
@@ -1204,6 +1504,34 @@ section {
 .booking-form select {
   padding: 12px 14px;
   border-radius: 10px;
+<<<<<<< HEAD
+  border: 1px solid rgba(31, 30, 27, 0.12);
+  background: #fbf9f5;
+=======
+<<<<<<< HEAD
+  border: 1px solid rgba(47, 59, 47, 0.2);
+  background: #f8f5ef;
+>>>>>>> c3b544a (Mises à jour site)
+  font-family: inherit;
+  width: 100%;
+  min-width: 0;
+}
+
+<<<<<<< HEAD
+=======
+.list-card h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.list-card ul {
+  list-style: none;
+  color: var(--muted);
+  display: grid;
+  gap: 8px;
+  font-size: 14.5px;
+}
+=======
   border: 1px solid rgba(31, 30, 27, 0.12);
   background: #fbf9f5;
   font-family: inherit;
@@ -1211,6 +1539,8 @@ section {
   min-width: 0;
 }
 
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
 
 .contact-grid {
   display: grid;
@@ -1473,10 +1803,19 @@ section {
     grid-column: auto;
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c3b544a (Mises à jour site)
   .calendar-multi {
     grid-template-columns: 1fr;
   }
 
+<<<<<<< HEAD
+=======
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
   .hero {
     padding-top: 80px;
   }
@@ -1510,12 +1849,21 @@ section {
   }
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c3b544a (Mises à jour site)
 @media (max-width: 1100px) {
   .booking-grid {
     max-width: min(1200px, 94vw);
   }
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> fb46991 (Initial commit)
+>>>>>>> c3b544a (Mises à jour site)
 @media (max-width: 640px) {
   .nav-wrapper {
     padding: 16px 5vw;
