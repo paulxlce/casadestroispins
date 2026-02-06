@@ -1,6 +1,4 @@
 const calendarRoot = document.querySelector('[data-calendar]');
-const calendarNextRoot = document.querySelector('[data-calendar-next]');
-
 if (calendarRoot) {
   const monthLabel = document.querySelector('[data-month-label]');
   const prevBtn = document.querySelector('[data-prev-month]');
@@ -127,13 +125,8 @@ if (calendarRoot) {
   }
 
   function renderCalendar() {
-    const nextMonth = new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1, 1);
-    monthLabel.textContent = `${monthFormatter.format(currentMonth)} — ${monthFormatter.format(nextMonth)}`;
-
+    monthLabel.textContent = monthFormatter.format(currentMonth);
     renderMonth(calendarRoot, currentMonth);
-    if (calendarNextRoot) {
-      renderMonth(calendarNextRoot, nextMonth);
-    }
   }
 
   function handleDateSelection(date) {

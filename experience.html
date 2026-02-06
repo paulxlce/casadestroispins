@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Expérience | Casa des Trois Pins</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -11,12 +17,11 @@
       <header class="site-header">
         <div class="nav-wrapper">
           <a class="logo" href="index.html#video" aria-label="Casa des Trois Pins">
-            <img src="assets/logo/Screenshot%202026-01-30%20at%2011.36.33.png" alt="Casa des Trois Pins" class="logo-image" />
+            <img src="assets/logo/logo1.png" alt="Casa des Trois Pins" class="logo-image" />
           </a>
           <nav class="primary-nav" aria-label="Navigation principale">
-            <a href="index.html#video">Accueil</a>
-            <a href="index.html#villa">La villa</a>
-            <a href="experience.html">Expérience</a>
+            <a href="index.html#video">La villa</a>
+            <a href="experience.html">Emplacement</a>
             <a href="booking.html">Réserver</a>
           </nav>
           <div class="header-actions">
@@ -33,34 +38,14 @@
       <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
         <button class="mobile-close" type="button" aria-label="Fermer le menu">×</button>
         <nav class="mobile-nav" aria-label="Navigation mobile">
-          <a href="index.html#video">Accueil</a>
-          <a href="index.html#villa">La villa</a>
-          <a href="experience.html">Expérience</a>
+          <a href="index.html#video">La villa</a>
+          <a href="experience.html">Emplacement</a>
           <a class="button button-ghost" href="booking.html">Réserver</a>
           <a class="button" href="contact.html">Contact</a>
         </nav>
       </div>
 
       <main>
-        <section class="page-hero">
-          <div class="page-hero-content">
-            <p class="eyebrow">À proximité</p>
-            <h1>Expérience à Hossegor</h1>
-            <p>
-              Entre plages iconiques, forêts de pins et tables locales, profitez
-              d'une destination vivante tout en gardant la tranquillité de la
-              villa.
-            </p>
-            <div class="hero-actions">
-              <a class="button" href="contact.html">Planifier un séjour</a>
-              <a class="button button-ghost" href="#carte">Voir la carte</a>
-            </div>
-          </div>
-          <div class="page-hero-media">
-            <img src="assets/xp/map.png" alt="Carte d'Hossegor avec la villa et les activités" />
-          </div>
-        </section>
-
         <section class="nearby" id="proximite">
           <div class="section-header">
             <h2>À proximité de Casa des trois pins</h2>
@@ -131,13 +116,12 @@
 
         <section class="experience-map" id="carte">
           <div class="map-card">
-            <img src="assets/xp/map.png" alt="Carte d'Hossegor" />
-            <div class="map-legend">
-              <span class="legend-item"><span class="legend-dot home"></span>La villa</span>
-              <span class="legend-item"><span class="legend-dot beach"></span>Plages</span>
-              <span class="legend-item"><span class="legend-dot food"></span>Restaurants</span>
-              <span class="legend-item"><span class="legend-dot activity"></span>Activités</span>
+            <div class="map-header">
+              <p class="eyebrow">Les alentours</p>
+              <h3>Seignosse • Hossegor</h3>
+              <p>Emplacement approximatif pour préserver la tranquillité de la villa.</p>
             </div>
+            <div id="hossegor-map" class="map-canvas" aria-label="Carte interactive des alentours"></div>
           </div>
           <div class="distance-list">
             <h3>Distances clés</h3>
@@ -148,77 +132,69 @@
               <li><strong>Golf de Seignosse</strong> — 12 min en voiture</li>
               <li><strong>Marché d'Hossegor</strong> — 15 min en vélo</li>
             </ul>
-            <a class="button" href="contact.html">Recevoir l'itinéraire</a>
+            <a class="button button-small" href="booking.html">Réserver</a>
           </div>
         </section>
 
-        <section class="cta">
-          <h2>Envie de tout explorer ?</h2>
-          <p>Contactez le propriétaire pour préparer un séjour sur-mesure.</p>
-          <div class="cta-actions">
-            <a class="button" href="contact.html">Contacter le propriétaire</a>
-            <a class="button button-ghost" href="booking.html">Réserver</a>
-          </div>
-        </section>
       </main>
 
       <footer class="site-footer">
-        <div class="footer-top">
-          <div class="footer-logo">
-            <img src="assets/logo/Screenshot%202026-01-30%20at%2011.37.15.png" alt="Logo Casa des Trois Pins" />
-            <span>Casa des Trois Pins</span>
+        <div class="footer-minimal">
+          <div class="footer-nav">
+            <a href="index.html#video">La villa</a>
+            <a href="experience.html">Emplacement</a>
+            <a href="booking.html">Réserver</a>
+            <a href="contact.html">Contact</a>
           </div>
-          <div class="footer-columns">
-            <div>
-              <h4>Casa des Trois Pins</h4>
-              <a href="index.html#video">Accueil</a>
-              <a href="index.html#villa">La Villa</a>
-              <a href="experience.html">Expérience</a>
-              <a href="booking.html">Tarifs</a>
-              <a href="contact.html">Contact</a>
-            </div>
-            <div>
-              <h4>Informations</h4>
-              <a href="#">Localisation</a>
-              <a href="#">Conditions</a>
-              <a href="#">FAQ</a>
-              <a href="#">Mentions légales</a>
-              <a href="#">Politique de confidentialité</a>
-            </div>
-            <div>
-              <h4>Suivez-nous</h4>
-              <a href="#">Instagram</a>
-              <a href="#">Facebook</a>
-              <a href="#">Newsletter</a>
-              <a href="#">Restez informé</a>
-            </div>
-            <div class="newsletter">
-              <h4>Email</h4>
-              <label for="newsletter">Envoyer</label>
-              <div class="newsletter-form">
-                <input id="newsletter" type="email" placeholder="Votre email" />
-                <button class="button" type="button">Merci pour votre inscription !</button>
-              </div>
-              <p class="fineprint">
-                En vous abonnant, vous acceptez notre politique de confidentialité.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>© 2024 Casa des Trois Pins. Tous droits réservés</p>
-          <div class="footer-links">
-            <a href="#">Politique de confidentialité</a>
-            <a href="#">Conditions d'utilisation</a>
-            <a href="#">Paramètres des cookies</a>
-          </div>
-          <div class="social">
-            <span>●</span><span>●</span><span>●</span><span>●</span>
+          <div class="footer-legal">
+            <a href="mentions-legales.html">Mentions légales</a>
+            <a href="politique-confidentialite.html">Politique de confidentialité</a>
+            <a href="https://www.instagram.com/casa_troispins/" class="instagram-link" target="_blank" rel="noopener noreferrer">Instagram</a>
           </div>
         </div>
       </footer>
     </div>
 
     <script src="script.js"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script>
+      const mapContainer = document.getElementById('hossegor-map');
+
+      if (mapContainer) {
+        const map = L.map(mapContainer, {
+          scrollWheelZoom: false,
+          dragging: true,
+          zoomControl: true,
+        }).setView([43.6882576, -1.4304506], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; OpenStreetMap',
+          maxZoom: 18,
+        }).addTo(map);
+
+        const circle = L.circle([43.6882576, -1.4304506], {
+          radius: 320,
+          color: '#1f1e1b',
+          weight: 0,
+          fillColor: '#1f1e1b',
+          fillOpacity: 0.25,
+        }).addTo(map);
+
+        const icon = L.divIcon({
+          className: 'map-pin',
+          html: '<span class="map-pin-core">⌂</span>',
+          iconSize: [48, 48],
+        });
+
+        L.marker([43.6882576, -1.4304506], { icon }).addTo(map).bindPopup('Casa des Trois Pins');
+
+        map.on('focus', () => map.scrollWheelZoom.disable());
+        map.on('click', () => map.scrollWheelZoom.disable());
+      }
+    </script>
   </body>
 </html>
