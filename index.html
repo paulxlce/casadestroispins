@@ -6,6 +6,12 @@
     <title>Casa des Trois Pins</title>
     <link rel="preconnect" href="https://player.vimeo.com" />
     <link rel="preconnect" href="https://i.vimeocdn.com" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -56,6 +62,19 @@
               fetchpriority="high"
             ></iframe>
           </div>
+          <div class="video-hero-media-vertical" aria-hidden="true">
+            <div class="video-hero-vertical">
+              <iframe
+                class="vimeo-embed vimeo-embed-vertical"
+                src="https://player.vimeo.com/video/1162998678?background=1&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0&amp;title=0&amp;byline=0&amp;portrait=0&amp;playsinline=1&amp;dnt=1&amp;autopause=0"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                referrerpolicy="strict-origin-when-cross-origin"
+                title="Casa des Trois Pins - Vertical"
+                loading="eager"
+              ></iframe>
+            </div>
+          </div>
           <div class="video-hero-overlay"></div>
           <div class="video-hero-content">
             <p class="eyebrow">Casa des Trois Pins</p>
@@ -66,7 +85,6 @@
             </p>
             <div class="hero-actions">
               <a class="button" href="booking.html">Réserver</a>
-              <a class="button button-ghost" href="#villa">Découvrir</a>
             </div>
           </div>
           <div class="scroll-indicator" aria-hidden="true">↓</div>
@@ -139,13 +157,24 @@
               </div>
             </div>
             <div class="hero-actions">
-              <a class="button" href="#villa">Découvrir</a>
-              <a class="button button-ghost" href="booking.html">Réserver</a>
+              <a class="button" href="booking.html">Réserver</a>
             </div>
           </div>
         </section>
 
-        <section class="essence" id="villa">
+        <section class="mobile-map-section" aria-label="Carte interactive">
+          <div class="map-card">
+            <div class="map-header">
+              <p class="eyebrow">Emplacement</p>
+              <h3>Autour d'Hossegor</h3>
+              <p>Explorez les alentours et repérez les spots clés en un coup d'œil.</p>
+            </div>
+            <div id="hossegor-map-mobile" class="map-canvas" aria-label="Carte interactive des alentours"></div>
+            <a class="button button-small" href="experience.html">Découvrir l'emplacement</a>
+          </div>
+        </section>
+
+        <section class="essence home-essence" id="villa">
           <div class="section-text">
             <h2>L'essence de la Casa des trois pins</h2>
             <p>
@@ -172,8 +201,8 @@
             <div class="collage-tile small">
               <img src="assets/photos/9%20Av.%20du%20Penon%20-11.jpeg" alt="Terrasse de la villa" />
             </div>
-            <div class="collage-tile large">
-              <img src="assets/photos/9%20Av.%20du%20Penon%20-12.jpeg" alt="Cuisine ouverte" />
+            <div class="collage-tile large mobile-hide">
+              <img class="collage-image-desktop" src="assets/photos/9%20Av.%20du%20Penon%20-12.jpeg" alt="Cuisine ouverte" />
             </div>
           </div>
         </section>
@@ -387,24 +416,77 @@
           </div>
         </div>
       </footer>
+
+      <div class="mobile-cta-bar" role="navigation" aria-label="Actions rapides">
+        <a class="button" href="booking.html">Réserver</a>
+        <a class="button button-ghost" href="contact.html">Contact</a>
+      </div>
     </div>
 
     <script src="script.js"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <script src="https://player.vimeo.com/api/player.js"></script>
     <script>
-      const vimeoFrame = document.querySelector('.vimeo-embed');
+      const vimeoFrames = document.querySelectorAll('.vimeo-embed');
       const poster = document.querySelector('.video-hero-poster');
 
-      if (vimeoFrame && poster && window.Vimeo) {
-        const player = new Vimeo.Player(vimeoFrame);
-        const reveal = () => {
-          vimeoFrame.classList.add('is-ready');
+      if (vimeoFrames.length && poster && window.Vimeo) {
+        const reveal = (frame) => {
+          frame.classList.add('is-ready');
           poster.classList.add('is-hidden');
         };
-        player.on('playing', reveal);
-        player.on('play', reveal);
+        vimeoFrames.forEach((frame) => {
+          const player = new Vimeo.Player(frame);
+          player.ready().then(() => {
+            player.setMuted(true).catch(() => {});
+            player.setLoop(true).catch(() => {});
+            player.setAutopause(false).catch(() => {});
+            player.play().catch(() => {});
+          });
+          player.on('playing', () => {
+            setTimeout(() => reveal(frame), 150);
+          });
+        });
       } else if (poster) {
         poster.classList.add('is-hidden');
+      }
+
+      const mobileMap = document.getElementById('hossegor-map-mobile');
+
+      if (mobileMap && window.L) {
+        const map = L.map(mobileMap, {
+          scrollWheelZoom: false,
+          dragging: true,
+          zoomControl: false,
+        }).setView([43.6882576, -1.4304506], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; OpenStreetMap',
+          maxZoom: 18,
+        }).addTo(map);
+
+        L.circle([43.6882576, -1.4304506], {
+          radius: 320,
+          color: '#1f1e1b',
+          weight: 0,
+          fillColor: '#1f1e1b',
+          fillOpacity: 0.25,
+        }).addTo(map);
+
+        const icon = L.divIcon({
+          className: 'map-pin',
+          html: '<span class="map-pin-core">⌂</span>',
+          iconSize: [48, 48],
+        });
+
+        L.marker([43.6882576, -1.4304506], { icon }).addTo(map);
+
+        map.on('focus', () => map.scrollWheelZoom.disable());
+        map.on('click', () => map.scrollWheelZoom.disable());
       }
     </script>
   </body>
