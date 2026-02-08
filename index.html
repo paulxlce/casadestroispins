@@ -3,7 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Casa des Trois Pins</title>
+    <title>Location villa à Hossegor | Casa des Trois Pins</title>
+    <meta
+      name="description"
+      content="Villa de luxe à louer à Hossegor pour des vacances entre lac, forêt de pins et océan. / Luxury villa rental in Hossegor for holidays between lake, pine forest and ocean."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Location villa à Hossegor | Casa des Trois Pins" />
+    <meta
+      property="og:description"
+      content="Villa de luxe à louer à Hossegor pour des vacances entre lac, forêt de pins et océan. / Luxury villa rental in Hossegor for holidays between lake, pine forest and ocean."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:image" content="assets/photos/Case%20des%203%20Pins.jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Location villa à Hossegor | Casa des Trois Pins" />
+    <meta
+      name="twitter:description"
+      content="Villa de luxe à louer à Hossegor pour des vacances entre lac, forêt de pins et océan. / Luxury villa rental in Hossegor for holidays between lake, pine forest and ocean."
+    />
+    <meta name="twitter:image" content="assets/photos/Case%20des%203%20Pins.jpeg" />
     <link rel="preconnect" href="https://player.vimeo.com" />
     <link rel="preconnect" href="https://i.vimeocdn.com" />
     <link
@@ -13,13 +34,29 @@
       crossorigin=""
     />
     <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LodgingBusiness",
+        "name": "Casa des Trois Pins",
+        "description": "Villa de luxe à louer à Hossegor pour des vacances entre lac, forêt de pins et océan.",
+        "image": ["assets/photos/Case%20des%203%20Pins.jpeg"],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Hossegor",
+          "addressRegion": "Nouvelle-Aquitaine",
+          "addressCountry": "FR"
+        },
+        "inLanguage": ["fr", "en"]
+      }
+    </script>
   </head>
   <body>
     <div class="page">
       <header class="site-header">
         <div class="nav-wrapper">
           <a class="logo" href="#video" aria-label="Casa des Trois Pins">
-            <img src="assets/logo/logo1.png" alt="Casa des Trois Pins" class="logo-image" />
+            <img src="assets/logo/logo1.png" alt="Casa des Trois Pins" class="logo-image" decoding="async" />
           </a>
           <nav class="primary-nav" aria-label="Navigation principale">
             <a href="#video">La villa</a>
@@ -53,7 +90,7 @@
             <div class="video-hero-poster" aria-hidden="true"></div>
             <iframe
               class="vimeo-embed"
-              src="https://player.vimeo.com/video/1162129074?background=1&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0&amp;title=0&amp;byline=0&amp;portrait=0&amp;playsinline=1&amp;dnt=1"
+              src="https://player.vimeo.com/video/1162129074?background=1&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0&amp;title=0&amp;byline=0&amp;portrait=0&amp;playsinline=1&amp;dnt=1&amp;autopause=0"
               frameborder="0"
               allow="autoplay; fullscreen; picture-in-picture"
               referrerpolicy="strict-origin-when-cross-origin"
@@ -90,7 +127,14 @@
           <div class="scroll-indicator" aria-hidden="true">↓</div>
         </section>
         <section class="hero" id="accueil">
-          <img src="assets/photos/Case%20des%203%20Pins.jpeg" alt="Villa Casa des Trois Pins" class="hero-image" />
+          <img
+            src="assets/photos/Case%20des%203%20Pins.jpeg"
+            alt="Villa Casa des Trois Pins"
+            class="hero-image"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          />
           <div class="hero-content">
             <h1>Casa des trois pins – <span class="hero-title-line">l'art de vivre landais</span></h1>
             <p>
@@ -199,10 +243,16 @@
           </div>
           <div class="collage">
             <div class="collage-tile small">
-              <img src="assets/photos/9%20Av.%20du%20Penon%20-11.jpeg" alt="Terrasse de la villa" />
+              <img src="assets/photos/9%20Av.%20du%20Penon%20-11.jpeg" alt="Terrasse de la villa" loading="lazy" decoding="async" />
             </div>
             <div class="collage-tile large mobile-hide">
-              <img class="collage-image-desktop" src="assets/photos/9%20Av.%20du%20Penon%20-12.jpeg" alt="Cuisine ouverte" />
+              <img
+                class="collage-image-desktop"
+                src="assets/photos/9%20Av.%20du%20Penon%20-12.jpeg"
+                alt="Cuisine ouverte"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </div>
         </section>
@@ -222,7 +272,7 @@
           <div class="rooms-track" aria-label="Galerie des chambres">
             <article class="room-tile">
               <div class="room-media">
-                <img src="assets/Chambres/Chambre1.png" alt="Chambre 1" />
+                <img src="assets/Chambres/Chambre1.png" alt="Chambre 1" loading="lazy" decoding="async" />
               </div>
               <div class="room-info">
                 <h3>Chambre 1</h3>
@@ -234,7 +284,7 @@
             </article>
             <article class="room-tile">
               <div class="room-media">
-                <img src="assets/Chambres/Chambre2.png" alt="Chambre 2" />
+                <img src="assets/Chambres/Chambre2.png" alt="Chambre 2" loading="lazy" decoding="async" />
               </div>
               <div class="room-info">
                 <h3>Chambre 2</h3>
@@ -247,7 +297,7 @@
             </article>
             <article class="room-tile">
               <div class="room-media">
-                <img src="assets/Chambres/Chambre3.png" alt="Chambre 3" />
+                <img src="assets/Chambres/Chambre3.png" alt="Chambre 3" loading="lazy" decoding="async" />
               </div>
               <div class="room-info">
                 <h3>Chambre 3</h3>
@@ -260,7 +310,7 @@
             </article>
             <article class="room-tile">
               <div class="room-media">
-                <img src="assets/Chambres/Chambre4.png" alt="Chambre 4" />
+                <img src="assets/Chambres/Chambre4.png" alt="Chambre 4" loading="lazy" decoding="async" />
               </div>
               <div class="room-info">
                 <h3>Chambre 4</h3>
@@ -273,7 +323,7 @@
             </article>
             <article class="room-tile">
               <div class="room-media">
-                <img src="assets/Chambres/Chambre5.png" alt="Chambre 5" />
+                <img src="assets/Chambres/Chambre5.png" alt="Chambre 5" loading="lazy" decoding="async" />
               </div>
               <div class="room-info">
                 <h3>Chambre 5</h3>
@@ -286,7 +336,7 @@
             </article>
             <article class="room-tile">
               <div class="room-media">
-                <img src="assets/Chambres/Chambre6.png" alt="Chambre 6" />
+                <img src="assets/Chambres/Chambre6.png" alt="Chambre 6" loading="lazy" decoding="async" />
               </div>
               <div class="room-info">
                 <h3>Chambre 6</h3>
@@ -385,13 +435,30 @@
 
         <section class="gallery" id="galerie">
           <div class="gallery-main">
-            <img src="assets/photos/9%20Av.%20du%20Penon%20-1.jpeg" alt="Vue intérieure avec accès terrasse" />
+            <img
+              src="assets/photos/9%20Av.%20du%20Penon%20-1.jpeg"
+              alt="Vue intérieure avec accès terrasse"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
           <div class="gallery-side">
-            <img src="assets/photos/9%20Av.%20du%20Penon%20-3.jpeg" alt="Terrasse extérieure" />
+            <img src="assets/photos/9%20Av.%20du%20Penon%20-3.jpeg" alt="Terrasse extérieure" loading="lazy" decoding="async" />
           </div>
           <div class="gallery-link">
             <a href="photos.html">Voir toutes les photos</a>
+          </div>
+        </section>
+        <section class="mobile-vimeo" aria-label="Visite vidéo">
+          <div style="padding: 56.25% 0 0 0; position: relative;">
+            <iframe
+              src="https://player.vimeo.com/video/1162129074?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+              title="Casa des Trois Pins"
+            ></iframe>
           </div>
         </section>
 
@@ -441,14 +508,25 @@
         };
         vimeoFrames.forEach((frame) => {
           const player = new Vimeo.Player(frame);
+          let revealed = false;
+          const safeReveal = () => {
+            if (revealed) return;
+            revealed = true;
+            setTimeout(() => reveal(frame), 700);
+          };
           player.ready().then(() => {
             player.setMuted(true).catch(() => {});
             player.setLoop(true).catch(() => {});
             player.setAutopause(false).catch(() => {});
             player.play().catch(() => {});
           });
-          player.on('playing', () => {
-            setTimeout(() => reveal(frame), 150);
+          player.on('play', safeReveal);
+          player.on('playing', safeReveal);
+          player.on('timeupdate', (data) => {
+            if (data && data.seconds > 0.05) safeReveal();
+          });
+          player.on('ended', () => {
+            player.play().catch(() => {});
           });
         });
       } else if (poster) {
@@ -456,11 +534,12 @@
       }
 
       const mobileMap = document.getElementById('hossegor-map-mobile');
+      const isMobileMap = window.matchMedia('(max-width: 980px)').matches;
 
       if (mobileMap && window.L) {
         const map = L.map(mobileMap, {
           scrollWheelZoom: false,
-          dragging: true,
+          dragging: !isMobileMap,
           zoomControl: false,
         }).setView([43.6882576, -1.4304506], 13);
 
@@ -487,6 +566,15 @@
 
         map.on('focus', () => map.scrollWheelZoom.disable());
         map.on('click', () => map.scrollWheelZoom.disable());
+
+        if (isMobileMap) {
+          map.dragging.disable();
+          map.touchZoom.disable();
+          map.doubleClickZoom.disable();
+          map.boxZoom.disable();
+          map.keyboard.disable();
+          if (map.tap) map.tap.disable();
+        }
       }
     </script>
   </body>
