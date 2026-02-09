@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Book a villa in Hossegor | Casa des Trois Pins</title>
+    <meta
+      name="description"
+      content="Book your Hossegor holiday villa: availability, stay details and terms."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Book a villa in Hossegor | Casa des Trois Pins" />
+    <meta
+      property="og:description"
+      content="Book your Hossegor holiday villa: availability, stay details and terms."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+    <meta property="og:image" content="assets/photos/Case%20des%203%20Pins.jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Book a villa in Hossegor | Casa des Trois Pins" />
+    <meta
+      name="twitter:description"
+      content="Book your Hossegor holiday villa: availability, stay details and terms."
+    />
+    <meta name="twitter:image" content="assets/photos/Case%20des%203%20Pins.jpeg" />
+    <link rel="alternate" hreflang="fr" href="booking.html" />
+    <link rel="alternate" hreflang="en" href="booking-en.html" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="nav-wrapper">
+          <a class="logo" href="index-en.html#video" aria-label="Casa des Trois Pins">
+            <img src="assets/logo/logo1.png" alt="Casa des Trois Pins" class="logo-image" decoding="async" />
+          </a>
+          <nav class="primary-nav" aria-label="Main navigation">
+            <a href="index-en.html#video">The villa</a>
+            <a href="experience-en.html">Location</a>
+            <a href="booking-en.html">Book</a>
+          </nav>
+          <div class="header-actions">
+            <a class="button button-ghost" href="booking-en.html">Book</a>
+            <a class="button" href="contact-en.html">Contact</a>
+            <div class="lang-segmented" role="group" aria-label="Language">
+              <a class="lang-option" href="booking.html" data-lang="fr" lang="fr">FR</a>
+              <a class="lang-option is-active" href="booking-en.html" data-lang="en" lang="en" aria-current="page">EN</a>
+            </div>
+          </div>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <button class="mobile-close" type="button" aria-label="Close menu">×</button>
+        <nav class="mobile-nav" aria-label="Mobile navigation">
+          <a href="index-en.html#video">The villa</a>
+          <a href="experience-en.html">Location</a>
+          <a class="button button-ghost" href="booking-en.html">Book</a>
+          <a class="button" href="contact-en.html">Contact</a>
+        
+          <div class="lang-segmented" role="group" aria-label="Language">
+              <a class="lang-option" href="booking.html" data-lang="fr" lang="fr">FR</a>
+              <a class="lang-option is-active" href="booking-en.html" data-lang="en" lang="en" aria-current="page">EN</a>
+            </div>
+        </nav>
+      </div>
+
+      <main>
+        <section class="page-hero">
+          <div class="page-hero-content">
+            <p class="eyebrow">Book</p>
+            <h1>Your tailored stay</h1>
+            <p>
+              Check availability, select your dates, and get an instant estimate
+              for your stay at Casa des Trois Pins.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#calendrier">View availability</a>
+              <a class="button button-ghost" href="contact-en.html">Questions?</a>
+            </div>
+          </div>
+          <div class="page-hero-media">
+            <img
+              src="assets/photos/9%20Av.%20du%20Penon%20-7.jpeg"
+              alt="Casa des Trois Pins villa"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </section>
+
+        <section class="booking-grid" id="calendrier">
+          <div class="calendar-card">
+            <div class="calendar-header">
+              <div>
+                <h2>Availability calendar</h2>
+                <p>Choose your arrival and departure dates.</p>
+              </div>
+              <div class="month-nav">
+                <button class="nav-btn" type="button" data-prev-month>←</button>
+                <span data-month-label></span>
+                <button class="nav-btn" type="button" data-next-month>→</button>
+              </div>
+            </div>
+            <div class="calendar-legend">
+              <span><span class="legend-dot available"></span>Available</span>
+              <span><span class="legend-dot selected"></span>Selected</span>
+              <span><span class="legend-dot blocked"></span>Unavailable</span>
+            </div>
+            <p class="calendar-note">
+              Prices shown per night based on the minimum stay for each month.
+            </p>
+            <div class="calendar-multi">
+              <div class="calendar-grid" data-calendar></div>
+            </div>
+          </div>
+
+          <aside class="booking-summary">
+            <h3>Your stay</h3>
+            <div class="date-inputs">
+              <label>
+                Check-in
+                <input type="text" data-checkin readonly placeholder="Select" />
+              </label>
+              <label>
+                Check-out
+                <input type="text" data-checkout readonly placeholder="Select" />
+              </label>
+            </div>
+            <div class="price-breakdown">
+              <div class="row"><span>Nights</span><span data-nights>0</span></div>
+              <div class="row"><span>Price / night</span><span data-rate>—</span></div>
+              <div class="row"><span>Cleaning fee</span><span data-cleaning>180 €</span></div>
+              <div class="row"><span>Service fee</span><span data-service>—</span></div>
+              <div class="row total"><span>Estimated total</span><span data-total>—</span></div>
+            </div>
+            <form class="booking-form">
+              <label>
+                Full name
+                <input type="text" placeholder="Your name" required />
+              </label>
+              <label>
+                Email
+                <input type="email" placeholder="you@email.com" required />
+              </label>
+              <label>
+                Phone
+                <input type="tel" placeholder="+33" />
+              </label>
+              <label>
+                Guests
+                <select>
+                  <option>2 guests</option>
+                  <option>4 guests</option>
+                  <option>6 guests</option>
+                  <option>8 guests</option>
+                  <option>10 guests</option>
+                  <option>12 guests</option>
+                </select>
+              </label>
+              <button class="button" type="submit">Book this stay</button>
+              <p class="fineprint">
+                No credit card required for the request. Confirmation within 24h.
+              </p>
+            </form>
+          </aside>
+        </section>
+
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-minimal">
+          <div class="footer-nav">
+            <a href="index-en.html#video">The villa</a>
+            <a href="experience-en.html">Location</a>
+            <a href="booking-en.html">Book</a>
+            <a href="contact-en.html">Contact</a>
+          </div>
+          <div class="footer-legal">
+            <a href="mentions-legales-en.html">Legal notice</a>
+            <a href="politique-confidentialite-en.html">Privacy policy</a>
+            <a href="https://www.instagram.com/casa_troispins/" class="instagram-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </div>
+      </footer>
+
+      <div class="mobile-cta-bar" role="navigation" aria-label="Quick actions">
+        <a class="button" href="#calendrier">Choose dates</a>
+        <a class="button button-ghost" href="contact-en.html">Questions?</a>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="booking.js?v=2"></script>
+  </body>
+</html>

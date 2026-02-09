@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Location &amp; experiences in Hossegor | Casa des Trois Pins</title>
+    <meta
+      name="description"
+      content="Villa location in Hossegor with beaches, lake, surfing and nature."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Location &amp; experiences in Hossegor | Casa des Trois Pins" />
+    <meta
+      property="og:description"
+      content="Villa location in Hossegor with beaches, lake, surfing and nature."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+    <meta property="og:image" content="assets/photos/Case%20des%203%20Pins.jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Location &amp; experiences in Hossegor | Casa des Trois Pins" />
+    <meta
+      name="twitter:description"
+      content="Villa location in Hossegor with beaches, lake, surfing and nature."
+    />
+    <meta name="twitter:image" content="assets/photos/Case%20des%203%20Pins.jpeg" />
+    <link rel="alternate" hreflang="fr" href="experience.html" />
+    <link rel="alternate" hreflang="en" href="experience-en.html" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="nav-wrapper">
+          <a class="logo" href="index-en.html#video" aria-label="Casa des Trois Pins">
+            <img src="assets/logo/logo1.png" alt="Casa des Trois Pins" class="logo-image" decoding="async" />
+          </a>
+          <nav class="primary-nav" aria-label="Main navigation">
+            <a href="index-en.html#video">The villa</a>
+            <a href="experience-en.html">Location</a>
+            <a href="booking-en.html">Book</a>
+          </nav>
+          <div class="header-actions">
+            <a class="button button-ghost" href="booking-en.html">Book</a>
+            <a class="button" href="contact-en.html">Contact</a>
+            <div class="lang-segmented" role="group" aria-label="Language">
+              <a class="lang-option" href="experience.html" data-lang="fr" lang="fr">FR</a>
+              <a class="lang-option is-active" href="experience-en.html" data-lang="en" lang="en" aria-current="page">EN</a>
+            </div>
+          </div>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <button class="mobile-close" type="button" aria-label="Close menu">×</button>
+        <nav class="mobile-nav" aria-label="Mobile navigation">
+          <a href="index-en.html#video">The villa</a>
+          <a href="experience-en.html">Location</a>
+          <a class="button button-ghost" href="booking-en.html">Book</a>
+          <a class="button" href="contact-en.html">Contact</a>
+        
+          <div class="lang-segmented" role="group" aria-label="Language">
+              <a class="lang-option" href="experience.html" data-lang="fr" lang="fr">FR</a>
+              <a class="lang-option is-active" href="experience-en.html" data-lang="en" lang="en" aria-current="page">EN</a>
+            </div>
+        </nav>
+      </div>
+
+      <main>
+        <section class="nearby" id="proximite">
+          <div class="section-header">
+            <h2>A privileged location</h2>
+            <p>An architect-designed villa nestled between ocean, forest, and lake.</p>
+          </div>
+          <div class="card-grid">
+            <article class="image-card">
+              <img src="assets/xp/plage.jpg" alt="Landes beaches" loading="lazy" decoding="async" />
+              <div class="image-card-content">
+                <h3>The Landes beaches</h3>
+                <p>Only 5 minutes from the most beautiful beaches of Hossegor and Seignosse.</p>
+              </div>
+            </article>
+            <article class="image-card">
+              <img src="assets/xp/golf.jpg" alt="Golf courses among the pines" loading="lazy" decoding="async" />
+              <div class="image-card-content">
+                <h3>Our favorite golf courses</h3>
+                <p>Seignosse Golf, Biarritz Le Phare, Chiberta and Hossegor.</p>
+              </div>
+            </article>
+            <article class="image-card">
+              <img src="assets/xp/lac.jpg" alt="Hossegor marine lake" loading="lazy" decoding="async" />
+              <div class="image-card-content">
+                <h3>Hossegor marine lake</h3>
+                <p>Only a 5‑minute walk to the iconic Hossegor lake.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="experience-highlights" aria-label="Best spots around Hossegor">
+          <div class="section-header">
+            <h2>Must‑sees around the villa</h2>
+            <p>Surfing, lakeside walks, markets and local favorites: here, every day comes together easily.</p>
+          </div>
+          <div class="highlight-grid">
+            <article class="highlight-card highlight-card-middle">
+              <p class="highlight-kicker">Ocean & spots</p>
+              <h3>Beaches</h3>
+              <ul>
+                <li><strong>Plage Centrale</strong> — the iconic beach near Place des Landais.</li>
+                <li><strong>La Gravière</strong> — renowned surf spot, powerful waves.</li>
+                <li><strong>Plage des Estagnots</strong> — large Seignosse beach, very popular with surfers.</li>
+                <li><strong>Plage Blanche (lake)</strong> — calm water, ideal for families.</li>
+              </ul>
+            </article>
+            <article class="highlight-card">
+              <p class="highlight-kicker">Between lake & ocean</p>
+              <h3>Nature outings</h3>
+              <ul>
+                <li><strong>Hossegor lake loop</strong> — 5.8 km walk along the water.</li>
+                <li><strong>Stand‑up paddle</strong> — calm waters for an easy outing.</li>
+                <li><strong>Seafront & Place des Landais</strong> — an iconic promenade.</li>
+              </ul>
+            </article>
+            <article class="highlight-card">
+              <p class="highlight-kicker">Local life</p>
+              <h3>Markets & ports</h3>
+              <ul>
+                <li><strong>Hossegor market</strong> — Wednesday, Friday and Sunday (seasonal).</li>
+                <li><strong>Les Halles</strong> — local produce year‑round.</li>
+                <li><strong>Fish market</strong> — Capbreton port, catch of the day.</li>
+                <li><strong>Oyster shacks</strong> — tasting at sunset.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="experience-map" id="carte">
+          <div class="map-card">
+            <div class="map-header">
+              <p class="eyebrow">Surroundings</p>
+              <h3>Seignosse • Hossegor</h3>
+              <p>Approximate location to preserve the villa's tranquility.</p>
+            </div>
+            <div id="hossegor-map" class="map-canvas" aria-label="Interactive area map"></div>
+          </div>
+          <div class="distance-list">
+            <h3>Key distances</h3>
+            <ul>
+              <li><strong>Plage Centrale</strong> — 5 min by car</li>
+              <li><strong>Marine lake</strong> — 8 min on foot</li>
+              <li><strong>Hossegor town center</strong> — 10 min by bike</li>
+              <li><strong>Seignosse Golf</strong> — 12 min by car</li>
+              <li><strong>Hossegor market</strong> — 15 min by bike</li>
+            </ul>
+            <a class="button button-small" href="booking-en.html">Book</a>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-minimal">
+          <div class="footer-nav">
+            <a href="index-en.html#video">The villa</a>
+            <a href="experience-en.html">Location</a>
+            <a href="booking-en.html">Book</a>
+            <a href="contact-en.html">Contact</a>
+          </div>
+          <div class="footer-legal">
+            <a href="mentions-legales-en.html">Legal notice</a>
+            <a href="politique-confidentialite-en.html">Privacy policy</a>
+            <a href="https://www.instagram.com/casa_troispins/" class="instagram-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </div>
+      </footer>
+
+      <div class="mobile-cta-bar" role="navigation" aria-label="Quick actions">
+        <a class="button" href="booking-en.html">Book</a>
+        <a class="button button-ghost" href="contact-en.html">Contact</a>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script>
+      const mapContainer = document.getElementById('hossegor-map');
+
+      if (mapContainer) {
+        const map = L.map(mapContainer, {
+          scrollWheelZoom: false,
+          dragging: true,
+          zoomControl: true,
+        }).setView([43.6882576, -1.4304506], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; OpenStreetMap',
+          maxZoom: 18,
+        }).addTo(map);
+
+        const circle = L.circle([43.6882576, -1.4304506], {
+          radius: 320,
+          color: '#1f1e1b',
+          weight: 0,
+          fillColor: '#1f1e1b',
+          fillOpacity: 0.25,
+        }).addTo(map);
+
+        const icon = L.divIcon({
+          className: 'map-pin',
+          html: '<span class="map-pin-core">⌂</span>',
+          iconSize: [48, 48],
+        });
+
+        L.marker([43.6882576, -1.4304506], { icon }).addTo(map).bindPopup('Casa des Trois Pins');
+
+        map.on('focus', () => map.scrollWheelZoom.disable());
+        map.on('click', () => map.scrollWheelZoom.disable());
+      }
+    </script>
+  </body>
+</html>

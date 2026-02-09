@@ -1,5 +1,13 @@
 const calendarRoot = document.querySelector('[data-calendar]');
 if (calendarRoot) {
+  const pageLang = document.documentElement.getAttribute('lang') || 'fr';
+  const isFrench = pageLang.toLowerCase().startsWith('fr');
+  const locale = isFrench ? 'fr-FR' : 'en-US';
+  const copy = {
+    minStay: (nights) => (isFrench ? `Séjour min. ${nights} nuits` : `Min. stay ${nights} nights`),
+    unavailable: isFrench ? 'Indisponible' : 'Unavailable',
+  };
+
   const monthLabel = document.querySelector('[data-month-label]');
   const prevBtn = document.querySelector('[data-prev-month]');
   const nextBtn = document.querySelector('[data-next-month]');
@@ -16,23 +24,26 @@ if (calendarRoot) {
   let selectedEnd = null;
 
   const unavailableRanges = [
-    { start: '2024-07-12', end: '2024-07-20' },
-    { start: '2024-08-03', end: '2024-08-12' },
-    { start: '2024-09-06', end: '2024-09-14' },
+    { start: '2026-06-01', end: '2026-08-31' },
+    { start: '2026-11-01', end: '2027-01-31' },
   ];
 
-  const seasonalRates = [
-    { start: '2024-06-15', end: '2024-08-31', price: 680 },
-    { start: '2024-09-01', end: '2024-10-15', price: 520 },
-    { start: '2024-10-16', end: '2025-03-31', price: 420 },
-    { start: '2025-04-01', end: '2025-06-14', price: 520 },
+  const pricingRules = [
+    { start: '2026-02-01', end: '2026-02-28', minNights: 7, total: 4747 },
+    { start: '2026-03-01', end: '2026-03-31', minNights: 4, total: 3830 },
+    { start: '2026-04-01', end: '2026-04-30', minNights: 7, total: 6439 },
+    { start: '2026-05-01', end: '2026-05-31', minNights: 4, total: 4111 },
+    { start: '2026-09-01', end: '2026-09-30', minNights: 4, total: 4532 },
+    { start: '2026-10-01', end: '2026-10-31', minNights: 7, total: 5293 },
   ];
 
   const cleaningFee = 180;
   const serviceRate = 0.05;
 
-  const weekDays = ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim'];
-  const monthFormatter = new Intl.DateTimeFormat('fr-FR', { month: 'long', year: 'numeric' });
+  const weekDays = isFrench
+    ? ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim']
+    : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  const monthFormatter = new Intl.DateTimeFormat(locale, { month: 'long', year: 'numeric' });
 
   function normalizeDate(date) {
     return new Date(date.getFullYear(), date.getMonth(), date.getDate());
@@ -48,23 +59,44 @@ if (calendarRoot) {
 
   function isUnavailable(date) {
     const iso = toISO(date);
-    return unavailableRanges.some((range) => {
-      const start = new Date(range.start);
-      const end = new Date(range.end);
-      return iso >= range.start && iso <= range.end;
-    });
+    const blocked = unavailableRanges.some((range) => iso >= range.start && iso <= range.end);
+    if (blocked) {
+      return true;
+    }
+    return !pricingRules.some((rule) => iso >= rule.start && iso <= rule.end);
+  }
+
+  function getPricingRule(date) {
+    const iso = toISO(date);
+    return pricingRules.find((rule) => iso >= rule.start && iso <= rule.end) || null;
   }
 
   function getNightlyRate(date) {
-    const iso = toISO(date);
-    const match = seasonalRates.find((range) => iso >= range.start && iso <= range.end);
-    return match ? match.price : 520;
+    const rule = getPricingRule(date);
+    if (!rule) {
+      return null;
+    }
+    return rule.total / rule.minNights;
+  }
+
+  function formatEuros(value, decimals = 0) {
+    return new Intl.NumberFormat(locale, {
+      style: 'currency',
+      currency: 'EUR',
+      minimumFractionDigits: decimals,
+      maximumFractionDigits: decimals,
+    }).format(value);
   }
 
   function isRangeAvailable(start, end) {
     const cursor = new Date(start);
+    const startRule = getPricingRule(start);
+    if (!startRule) {
+      return false;
+    }
     while (cursor < end) {
-      if (isUnavailable(cursor)) {
+      const rule = getPricingRule(cursor);
+      if (isUnavailable(cursor) || !rule || rule !== startRule) {
         return false;
       }
       cursor.setDate(cursor.getDate() + 1);
@@ -105,6 +137,13 @@ if (calendarRoot) {
       if (isPast || unavailable) {
         button.classList.add('is-unavailable');
         button.disabled = true;
+      }
+      const nightlyRate = getNightlyRate(date);
+      if (nightlyRate) {
+        const price = document.createElement('span');
+        price.className = 'calendar-price';
+        price.textContent = formatEuros(nightlyRate, 2);
+        button.appendChild(price);
       }
 
       if (selectedStart && toISO(date) === toISO(selectedStart)) {
@@ -150,8 +189,8 @@ if (calendarRoot) {
   }
 
   function updateSummary() {
-    checkinField.value = selectedStart ? selectedStart.toLocaleDateString('fr-FR') : '';
-    checkoutField.value = selectedEnd ? selectedEnd.toLocaleDateString('fr-FR') : '';
+    checkinField.value = selectedStart ? selectedStart.toLocaleDateString(locale) : '';
+    checkoutField.value = selectedEnd ? selectedEnd.toLocaleDateString(locale) : '';
 
     if (!selectedStart || !selectedEnd) {
       nightsField.textContent = '0';
@@ -162,11 +201,27 @@ if (calendarRoot) {
     }
 
     const nights = Math.round((selectedEnd - selectedStart) / (1000 * 60 * 60 * 24));
+    const startRule = getPricingRule(selectedStart);
+    const minNights = startRule ? startRule.minNights : null;
+
+    if (!startRule || nights < minNights) {
+      nightsField.textContent = String(nights);
+      rateField.textContent = '—';
+      serviceField.textContent = '—';
+      totalField.textContent = minNights ? copy.minStay(minNights) : copy.unavailable;
+      return;
+    }
+
     let subtotal = 0;
     const cursor = new Date(selectedStart);
 
     while (cursor < selectedEnd) {
-      subtotal += getNightlyRate(cursor);
+      const nightly = getNightlyRate(cursor);
+      if (!nightly) {
+        subtotal = 0;
+        break;
+      }
+      subtotal += nightly;
       cursor.setDate(cursor.getDate() + 1);
     }
 
@@ -174,9 +229,9 @@ if (calendarRoot) {
     const total = subtotal + cleaningFee + serviceFee;
 
     nightsField.textContent = String(nights);
-    rateField.textContent = `${Math.round(subtotal / nights)} €`;
-    serviceField.textContent = `${serviceFee} €`;
-    totalField.textContent = `${total} €`;
+    rateField.textContent = formatEuros(subtotal / nights, 2);
+    serviceField.textContent = formatEuros(serviceFee);
+    totalField.textContent = formatEuros(total);
   }
 
   function changeMonth(delta) {

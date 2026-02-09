@@ -2,6 +2,22 @@ const menuToggle = document.querySelector('.menu-toggle');
 const mobileMenu = document.querySelector('.mobile-menu');
 const mobileClose = document.querySelector('.mobile-close');
 const mobileLinks = document.querySelectorAll('.mobile-nav a, .mobile-nav button');
+const langSwitches = document.querySelectorAll('[data-lang]');
+
+const langStorageKey = 'preferredLang';
+const getPageLang = () => document.documentElement.getAttribute('lang') || 'fr';
+const isFrench = (lang) => (lang || '').toLowerCase().startsWith('fr');
+
+if (langSwitches.length) {
+  langSwitches.forEach((link) => {
+    link.addEventListener('click', () => {
+      const targetLang = link.getAttribute('data-lang');
+      if (targetLang) {
+        localStorage.setItem(langStorageKey, targetLang);
+      }
+    });
+  });
+}
 
 const toggleMenu = (open) => {
   if (!mobileMenu || !menuToggle) return;
@@ -21,6 +37,22 @@ if (mobileClose) {
 
 if (mobileLinks.length) {
   mobileLinks.forEach((link) => link.addEventListener('click', () => toggleMenu(false)));
+}
+
+const storedLang = localStorage.getItem(langStorageKey);
+const browserLang = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+const desiredLang = storedLang || (isFrench(browserLang) ? 'fr' : 'en');
+const pageLang = getPageLang();
+const shouldSwitchToEnglish = desiredLang === 'en' && isFrench(pageLang);
+const shouldSwitchToFrench = desiredLang === 'fr' && !isFrench(pageLang);
+
+if (shouldSwitchToEnglish || shouldSwitchToFrench) {
+  const targetLang = shouldSwitchToEnglish ? 'en' : 'fr';
+  const alternate = document.querySelector(`link[rel="alternate"][hreflang="${targetLang}"]`);
+  const targetHref = alternate ? alternate.getAttribute('href') : null;
+  if (targetHref) {
+    window.location.replace(targetHref);
+  }
 }
 
 const slides = Array.from(document.querySelectorAll('[data-slide]'));

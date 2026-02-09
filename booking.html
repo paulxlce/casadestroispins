@@ -25,6 +25,8 @@
       content="Réservez votre location saisonnière à Hossegor : disponibilités, détails du séjour et conditions. / Book your Hossegor holiday villa: availability, stay details and terms."
     />
     <meta name="twitter:image" content="assets/photos/Case%20des%203%20Pins.jpeg" />
+    <link rel="alternate" hreflang="fr" href="booking.html" />
+    <link rel="alternate" hreflang="en" href="booking-en.html" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -42,6 +44,10 @@
           <div class="header-actions">
             <a class="button button-ghost" href="booking.html">Réserver</a>
             <a class="button" href="contact.html">Contact</a>
+            <div class="lang-segmented" role="group" aria-label="Language">
+              <a class="lang-option is-active" href="booking.html" data-lang="fr" lang="fr" aria-current="page">FR</a>
+              <a class="lang-option" href="booking-en.html" data-lang="en" lang="en">EN</a>
+            </div>
           </div>
           <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
             <span></span>
@@ -57,6 +63,11 @@
                     <a href="experience.html">Emplacement</a>
           <a class="button button-ghost" href="booking.html">Réserver</a>
           <a class="button" href="contact.html">Contact</a>
+        
+          <div class="lang-segmented" role="group" aria-label="Language">
+              <a class="lang-option is-active" href="booking.html" data-lang="fr" lang="fr" aria-current="page">FR</a>
+              <a class="lang-option" href="booking-en.html" data-lang="en" lang="en">EN</a>
+            </div>
         </nav>
       </div>
 
@@ -103,6 +114,9 @@
               <span><span class="legend-dot selected"></span>Sélectionné</span>
               <span><span class="legend-dot blocked"></span>Indisponible</span>
             </div>
+            <p class="calendar-note">
+              Tarifs affichés par nuit sur la base du séjour minimum indiqué pour chaque mois.
+            </p>
             <div class="calendar-multi">
               <div class="calendar-grid" data-calendar></div>
             </div>
