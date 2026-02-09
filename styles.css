@@ -822,19 +822,18 @@ section {
 }
 
 .photo-grid {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: var(--gutter);
-  align-items: start;
+  column-count: 2;
+  column-gap: var(--gutter);
 }
 
 .photo-grid figure {
-  grid-column: span 6;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 20px 45px rgba(22, 18, 12, 0.14);
   background: #ffffff;
-  align-self: start;
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 var(--gutter);
 }
 
 .photo-grid img {
@@ -2053,11 +2052,12 @@ section {
   }
 
   .photo-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-count: 2;
+    column-gap: var(--gutter);
   }
 
   .photo-grid figure {
-    grid-column: auto;
+    margin-bottom: var(--gutter);
   }
 
   .gallery-side {
