@@ -565,7 +565,7 @@ section {
 .video-hero-poster {
   position: absolute;
   inset: 0;
-  background: url("assets/optimized/photos/Screenshot%202026-02-06%20at%2009.43.07-1200.jpg") center/cover no-repeat;
+  background: url("assets/optimized/photos/Screenshot-2026-02-06-at-09.43.07-1200.jpg") center/cover no-repeat;
   z-index: 1;
   opacity: 1;
   transition: opacity 0.8s ease;
@@ -2127,7 +2127,7 @@ section {
   }
 
   .video-hero-poster {
-    background: url("assets/optimized/photos/Screenshot%202026-02-08%20at%2016.25.44-1200.jpg") center/cover no-repeat;
+    background: url("assets/optimized/photos/Screenshot-2026-02-08-at-16.25.44-1200.jpg") center/cover no-repeat;
   }
 
   .video-hero-overlay {
