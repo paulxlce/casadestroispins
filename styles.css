@@ -67,6 +67,10 @@ img {
   border-radius: var(--radius);
 }
 
+picture {
+  display: block;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -561,7 +565,7 @@ section {
 .video-hero-poster {
   position: absolute;
   inset: 0;
-  background: url("assets/photos/Screenshot%202026-02-06%20at%2009.43.07.png") center/cover no-repeat;
+  background: url("assets/optimized/photos/Screenshot%202026-02-06%20at%2009.43.07-1200.jpg") center/cover no-repeat;
   z-index: 1;
   opacity: 1;
   transition: opacity 0.8s ease;
@@ -903,6 +907,11 @@ section {
 .room-media {
   position: relative;
   aspect-ratio: 4 / 3;
+}
+
+.room-media picture {
+  display: block;
+  height: 100%;
 }
 
 .room-media img {
@@ -2118,7 +2127,7 @@ section {
   }
 
   .video-hero-poster {
-    background: url("assets/photos/Screenshot%202026-02-08%20at%2016.25.44.png") center/cover no-repeat;
+    background: url("assets/optimized/photos/Screenshot%202026-02-08%20at%2016.25.44-1200.jpg") center/cover no-repeat;
   }
 
   .video-hero-overlay {
@@ -2288,6 +2297,25 @@ section {
 }
 
 @media (min-width: 981px) {
+  .site-header .nav-wrapper {
+    position: relative;
+  }
+
+  .site-header .header-actions .lang-segmented {
+    position: absolute;
+    right: clamp(16px, 4vw, 56px);
+    top: 10px;
+    transform: none;
+    background: #ffffff;
+    border: 1px solid rgba(31, 30, 27, 0.35);
+    box-shadow: 0 8px 20px rgba(20, 16, 10, 0.12);
+    z-index: 5;
+  }
+
+  .hero-title-en {
+    font-size: clamp(2.1rem, 2.6vw, 3.3rem);
+  }
+
   .header-actions .lang-segmented {
     padding: 3px;
     gap: 4px;
