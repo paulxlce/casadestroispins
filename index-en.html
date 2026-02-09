@@ -274,12 +274,12 @@
               <h2>Bedrooms</h2>
               <p>Scroll through the rooms to compare views and amenities.</p>
             </div>
-            <div class="rooms-nav" aria-hidden="true">
-              <span>←</span>
-              <span>→</span>
+            <div class="rooms-nav">
+              <button class="rooms-nav-btn" type="button" data-rooms-prev aria-label="Previous rooms" aria-controls="rooms-track">←</button>
+              <button class="rooms-nav-btn" type="button" data-rooms-next aria-label="Next rooms" aria-controls="rooms-track">→</button>
             </div>
           </div>
-          <div class="rooms-track" aria-label="Bedroom gallery">
+          <div class="rooms-track" id="rooms-track" aria-label="Bedroom gallery">
             <article class="room-tile">
               <div class="room-media">
                 <picture>

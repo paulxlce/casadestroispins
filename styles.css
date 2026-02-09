@@ -880,6 +880,21 @@ section {
   color: #b6afa5;
 }
 
+.rooms-nav-btn {
+  border: 0;
+  background: none;
+  padding: 4px;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.rooms-nav-btn:hover,
+.rooms-nav-btn:focus-visible {
+  color: #7d756d;
+}
+
 .rooms-track {
   display: grid;
   grid-auto-flow: column;

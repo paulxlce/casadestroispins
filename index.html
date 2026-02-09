@@ -273,12 +273,12 @@ Tout est là pour un séjour confortable et naturellement apaisant.
               <h2>Les chambres</h2>
               <p>Faites défiler les chambres pour comparer les vues et les équipements.</p>
             </div>
-            <div class="rooms-nav" aria-hidden="true">
-              <span>←</span>
-              <span>→</span>
+            <div class="rooms-nav">
+              <button class="rooms-nav-btn" type="button" data-rooms-prev aria-label="Chambres précédentes" aria-controls="rooms-track">←</button>
+              <button class="rooms-nav-btn" type="button" data-rooms-next aria-label="Chambres suivantes" aria-controls="rooms-track">→</button>
             </div>
           </div>
-          <div class="rooms-track" aria-label="Galerie des chambres">
+          <div class="rooms-track" id="rooms-track" aria-label="Galerie des chambres">
             <article class="room-tile">
               <div class="room-media">
                 <picture>

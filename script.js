@@ -79,3 +79,29 @@ if (prevBtn && nextBtn) {
 if (dots.length) {
   dots.forEach((dot, index) => dot.addEventListener('click', () => setActiveSlide(index)));
 }
+
+const roomSections = document.querySelectorAll('.rooms');
+
+roomSections.forEach((section) => {
+  const track = section.querySelector('.rooms-track');
+  const prev = section.querySelector('[data-rooms-prev]');
+  const next = section.querySelector('[data-rooms-next]');
+
+  if (!track || !prev || !next) return;
+
+  const getScrollStep = () => {
+    const tile = track.querySelector('.room-tile');
+    if (!tile) return Math.max(240, track.clientWidth * 0.8);
+    const styles = window.getComputedStyle(track);
+    const gap = parseFloat(styles.columnGap || styles.gap || '0');
+    return tile.getBoundingClientRect().width + gap;
+  };
+
+  prev.addEventListener('click', () => {
+    track.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
+  });
+
+  next.addEventListener('click', () => {
+    track.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
+  });
+});
