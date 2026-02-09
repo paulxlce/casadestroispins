@@ -2003,6 +2003,13 @@ section {
 }
 
 @media (max-width: 980px) {
+  .footer-legal .instagram-link::before,
+  .footer-legal .instagram-link::after {
+    display: none;
+  }
+}
+
+@media (max-width: 980px) {
   body {
     padding-bottom: calc(72px + env(safe-area-inset-bottom));
   }
@@ -2058,6 +2065,81 @@ section {
 
   .photo-grid figure {
     margin-bottom: var(--gutter);
+  }
+
+  .footer-minimal {
+    gap: 16px;
+    padding: 24px 20px 10px;
+    background: #f7f3ec;
+    border-radius: 18px;
+    box-shadow: 0 14px 30px rgba(20, 16, 10, 0.08);
+    align-items: stretch;
+  }
+
+  .footer-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    text-align: center;
+    justify-items: stretch;
+  }
+
+  .footer-nav a {
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    padding: 12px 10px;
+    border-radius: calc(var(--radius) - 4px);
+    background: #ffffff;
+    border: 1px solid rgba(31, 30, 27, 0.14);
+    box-shadow: 0 10px 20px rgba(20, 16, 10, 0.08);
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-legal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 12px;
+    text-align: center;
+    padding-top: 6px;
+    border-top: 1px solid rgba(31, 30, 27, 0.1);
+    justify-items: stretch;
+  }
+
+  .footer-legal .instagram-link {
+    grid-column: 1 / -1;
+    order: -1;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    padding: 12px 10px;
+    border-radius: calc(var(--radius) - 4px);
+    background: #1f1e1b;
+    color: #ffffff;
+    border: 1px solid rgba(31, 30, 27, 0.2);
+    box-shadow: 0 12px 24px rgba(20, 16, 10, 0.16);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-legal a {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+    opacity: 0.55;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-legal a.instagram-link {
+    opacity: 1;
   }
 
   .gallery-side {
